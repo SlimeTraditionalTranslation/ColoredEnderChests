@@ -1,6 +1,7 @@
 name: ColoredEnderChests
 version: ${project.version}
 author: TheBusyBiscuit
+description: 黏液科技附加 彩色終界箱 繁體翻譯版.
 depend: [Slimefun, CS-CoreLib]
 
 main: io.github.thebusybiscuit.coloredenderchests.ColoredEnderChests

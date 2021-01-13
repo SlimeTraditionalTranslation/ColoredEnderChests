@@ -3,7 +3,7 @@ package io.github.thebusybiscuit.coloredenderchests;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.bstats.bukkit.Metrics;
+//import org.bstats.bukkit.Metrics;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -13,8 +13,8 @@ import io.github.thebusybiscuit.slimefun4.core.researching.Research;
 import me.mrCookieSlime.Slimefun.Objects.Category;
 import me.mrCookieSlime.Slimefun.cscorelib2.config.Config;
 import me.mrCookieSlime.Slimefun.cscorelib2.item.CustomItem;
-import me.mrCookieSlime.Slimefun.cscorelib2.updater.GitHubBuildsUpdater;
-import me.mrCookieSlime.Slimefun.cscorelib2.updater.Updater;
+//import me.mrCookieSlime.Slimefun.cscorelib2.updater.GitHubBuildsUpdater;
+//import me.mrCookieSlime.Slimefun.cscorelib2.updater.Updater;
 
 public class ColoredEnderChests extends JavaPlugin implements SlimefunAddon {
 
@@ -27,42 +27,42 @@ public class ColoredEnderChests extends JavaPlugin implements SlimefunAddon {
         cfg = new Config(this);
 
         // Setting up bStats
-        new Metrics(this, 4907);
+        //new Metrics(this, 4907);
 
         // Setting up the Auto-Updater
-        if (getDescription().getVersion().startsWith("DEV - ")) {
+        /*if (getDescription().getVersion().startsWith("DEV - ")) {
             // If we are using a development build, we want to switch to our custom
             Updater updater = new GitHubBuildsUpdater(this, getFile(), "TheBusyBiscuit/ColoredEnderChests/master");
 
             if (cfg.getBoolean("options.auto-update")) {
                 updater.start();
             }
-        }
+        }*/
 
-        Research enderChestsResearch = new Research(new NamespacedKey(this, "colored_enderchests"), 2610, "Colored Ender Chests", 20);
-        Research bigEnderChestsResearch = new Research(new NamespacedKey(this, "big_colored_enderchests"), 2611, "Big Colored Ender Chests", 30);
+        Research enderChestsResearch = new Research(new NamespacedKey(this, "colored_enderchests"), 2610, "彩色終界箱", 20);
+        Research bigEnderChestsResearch = new Research(new NamespacedKey(this, "big_colored_enderchests"), 2611, "大彩色終界箱", 30);
 
         enderChestsResearch.register();
         bigEnderChestsResearch.register();
 
-        colors.put(0, "&rWhite");
-        colors.put(1, "&6Orange");
-        colors.put(2, "&dMagenta");
-        colors.put(3, "&bLight Blue");
-        colors.put(4, "&eYellow");
-        colors.put(5, "&aLime");
-        colors.put(6, "&dPink");
-        colors.put(7, "&8Dark Gray");
-        colors.put(8, "&7Light Gray");
-        colors.put(9, "&3Cyan");
-        colors.put(10, "&5Purple");
-        colors.put(11, "&9Blue");
-        colors.put(12, "&6Brown");
-        colors.put(13, "&2Green");
-        colors.put(14, "&4Red");
-        colors.put(15, "&8Black");
+        colors.put(0, "&f白");
+        colors.put(1, "&6橙");
+        colors.put(2, "&d品紅");
+        colors.put(3, "&b淺藍");
+        colors.put(4, "&e黃");
+        colors.put(5, "&a酸橙");
+        colors.put(6, "&d粉紅");
+        colors.put(7, "&8深灰");
+        colors.put(8, "&7淺灰");
+        colors.put(9, "&3青");
+        colors.put(10, "&5紫");
+        colors.put(11, "&9藍");
+        colors.put(12, "&6棕");
+        colors.put(13, "&2綠");
+        colors.put(14, "&4紅");
+        colors.put(15, "&8黑");
 
-        category = new Category(new NamespacedKey(this, "colored_enderchests"), new CustomItem(Material.ENDER_CHEST, "&5Colored Ender Chests"), 2);
+        category = new Category(new NamespacedKey(this, "colored_enderchests"), new CustomItem(Material.ENDER_CHEST, "&5彩色終界箱"), 2);
 
         for (int c1 = 0; c1 < 16; c1++) {
             for (int c2 = 0; c2 < 16; c2++) {
@@ -95,6 +95,6 @@ public class ColoredEnderChests extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public String getBugTrackerURL() {
-        return "https://github.com/TheBusyBiscuit/ColoredEnderChests/issues";
+        return "https://github.com/xMikux/ColoredEnderChests/issues";
     }
 }
